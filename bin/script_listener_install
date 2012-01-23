@@ -1,0 +1,2 @@
+#! /bin/bash
+cp -R "/Applications/Adobe Photoshop CS5.1/Scripting/Utilities/ScriptingListener.plugin" "/Applications/Adobe Photoshop CS5.1/Plug-ins/Automate"
