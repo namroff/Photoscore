@@ -172,19 +172,21 @@ var photoscore = {
 
 
 
-    paintMidtoneContrast: function( layer ) {
-        layer.applyHighPass( 40 );
-        layer.blendMode = BlendMode.OVERLAY;var idsetd = charIDToTypeID( "setd" );
-        layer.opacity = 66;
-        photoscore.setBlendingThresholds({
-            thisLayerBlackMin: 50,
-            thisLayerBlackMax: 90,
-            thisLayerWhiteMin: 135,
-            thisLayerWhiteMax: 210,
-            underlyingLayerBlackMin: 50,
-            underlyingLayerBlackMax: 90,
-            underlyingLayerWhiteMin: 135,
-            underlyingLayerWhiteMax: 210
+    paintMidtoneContrast: function() {
+        photoscore.newPaintLayer(function( layer ) {
+            layer.applyHighPass( 40 );
+            layer.blendMode = BlendMode.OVERLAY;var idsetd = charIDToTypeID( "setd" );
+            layer.opacity = 66;
+            photoscore.setBlendingThresholds({
+                thisLayerBlackMin: 50,
+                thisLayerBlackMax: 90,
+                thisLayerWhiteMin: 135,
+                thisLayerWhiteMax: 210,
+                underlyingLayerBlackMin: 50,
+                underlyingLayerBlackMax: 90,
+                underlyingLayerWhiteMin: 135,
+                underlyingLayerWhiteMax: 210
+            });
         });
     }
 
